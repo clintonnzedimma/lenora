@@ -29,9 +29,9 @@
     <link rel="stylesheet" href="/assets/vendors/font_awesome/assets/css/all.min.css" />
     <link rel="stylesheet" href="/assets/vendors/tagsinput/tagsinput.css" />
     <!-- datatable CSS -->
-    <link rel="stylesheet" href="/assets/vendors/datatable/assets/css/jquery.dataTables.min.css" />
-    <link rel="stylesheet" href="/assets/vendors/datatable/assets/css/responsive.dataTables.min.css" />
-    <link rel="stylesheet" href="/assets/vendors/datatable/assets/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="/assets/vendors/datatable/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="/assets/vendors/datatable/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="/assets/vendors/datatable/css/buttons.dataTables.min.css" />
     <!-- text editor css -->
     <link rel="stylesheet" href="/assets/vendors/text_editor/summernote-bs4.css" />
     <!-- morris css -->
@@ -148,15 +148,15 @@
 <!-- gijgo css -->
 <script src="/assets/vendors/gijgo/gijgo.min.js"></script>
 <!-- responsive table -->
-<script src="/assets/vendors/datatable/assets/js/jquery.dataTables.min.js"></script>
-<script src="/assets/vendors/datatable/assets/js/dataTables.responsive.min.js"></script>
-<script src="/assets/vendors/datatable/assets/js/dataTables.buttons.min.js"></script>
-<script src="/assets/vendors/datatable/assets/js/buttons.flash.min.js"></script>
-<script src="/assets/vendors/datatable/assets/js/jszip.min.js"></script>
-<script src="/assets/vendors/datatable/assets/js/pdfmake.min.js"></script>
-<script src="/assets/vendors/datatable/assets/js/vfs_fonts.js"></script>
-<script src="/assets/vendors/datatable/assets/js/buttons.html5.min.js"></script>
-<script src="/assets/vendors/datatable/assets/js/buttons.print.min.js"></script>
+<script src="/assets/vendors/datatable/js/jquery.dataTables.min.js"></script>
+<script src="/assets/vendors/datatable/js/dataTables.responsive.min.js"></script>
+<script src="/assets/vendors/datatable/js/dataTables.buttons.min.js"></script>
+<script src="/assets/vendors/datatable/js/buttons.flash.min.js"></script>
+<script src="/assets/vendors/datatable/js/jszip.min.js"></script>
+<script src="/assets/vendors/datatable/js/pdfmake.min.js"></script>
+<script src="/assets/vendors/datatable/js/vfs_fonts.js"></script>
+<script src="/assets/vendors/datatable/js/buttons.html5.min.js"></script>
+<script src="/assets/vendors/datatable/js/buttons.print.min.js"></script>
 
 <script src="/assets/js/chart.min.js"></script>
 <!-- progressbar js -->

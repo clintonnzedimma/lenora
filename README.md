@@ -3,9 +3,9 @@
  <p align="center">	
   	Lenora is an Electronic learning system.
     Its features are
-    1) Login
-    2) Live Stream of Lectures
-    3) Broadcast of lectures
+    1) Login <br>
+    2) Live Stream of Lectures <br>
+    3) Broadcast of lectures <br>
 </p>
 
 

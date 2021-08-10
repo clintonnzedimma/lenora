@@ -1,3 +1,11 @@
+    //active sidebar
+    $('.sidebar_icon').on('click', function(){
+        $('.sidebar').toggleClass('active_sidebar');
+    });
+    $('.sidebar_close_icon i').on('click', function(){
+        $('.sidebar').removeClass('active_sidebar');
+    });
+
 (function ($) {
     "use strict";
     //progressbar js
