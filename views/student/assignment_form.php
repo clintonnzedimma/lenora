@@ -121,6 +121,7 @@
 <!-- footer  -->
 <!-- jquery slim -->
 <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/vendors/summernote/summernote.min.js"></script>
 <!-- popper js -->
 <script src="/assets/js/popper.min.js"></script>
 <!-- bootstarp js -->
@@ -163,7 +164,7 @@
 <script src="/assets/vendors/apex_chart/apexcharts.js"></script>
 
 <!-- custom js -->
-<script src="/assets/js/custom.js"></script>
+
 
 <!-- active_chart js -->
 <script src="/assets/js/active_chart2.js"></script>
@@ -175,9 +176,8 @@
 <script src="/assets/vendors/chart/assets/js/chartjs_active2.js"></script>
 
 <!-- summernote -->
-
+<script src="/assets/js/custom.js"></script>
 <!-- core -->
-<script src="/assets/vendors/summernote/summernote.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 

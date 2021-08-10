@@ -59,6 +59,14 @@
 <!-- sidebar part end -->
  <!--/ sidebar  -->
 
+ <style> 
+
+span.time_date {
+    font-size:9px;
+}
+</style>
+
+
 
 <section class="main_content dashboard_part">
         <!-- menu  -->
@@ -136,7 +144,7 @@
                                 <button class="icon-btn" onclick="scrollToBottom(100)"><i class="fa fa-angle-down" style="font-size:15px"></i> </button>
 
                                 <input  id="bm-msg" type="text" placeholder="Type your message here...">
-                                <button class="icon-btn" onclick="openAttachmentModal()"><i class="material-icons">photo</i> </button>
+                                <!-- <button class="icon-btn" onclick="openAttachmentModal()"><i class="material-icons">photo</i> </button> -->
                                 
                                 <button class="icon-btn" onclick="sendMessage()"><i class="material-icons">send</i></button>
                             </div>
@@ -394,9 +402,9 @@ $.post(
                             <div class="col-md-9">
                             <div class="chat-bubble chat-bubble--left">
                             <small> ${message.monicker} </small>
-                             <p style='color:white'> ${message.body} </p>
+                             <p style='color:#404237'> ${message.body} </p>
                              
-                             <span class="time_date" style='color:#e3e7f9'> ${padZero(d.getHours())}:${padZero(d.getMinutes())} |  ${padZero(d.getDate())}  ${beamProps.time.months[d.getMonth()].slice(0,3)} </span></div>
+                             <span class="time_date" style='color:#292929'> ${padZero(d.getHours())}:${padZero(d.getMinutes())} |  ${padZero(d.getDate())}  ${beamProps.time.months[d.getMonth()].slice(0,3)} </span></div>
                             </div>
                             </div>
                         </div>
@@ -458,9 +466,9 @@ function loadNewMessages(){
                             <div class="col-md-9">
                             <div class="chat-bubble chat-bubble--left">
                             <small> ${message.monicker} </small>
-                             <p style='color:white'> ${message.body} </p>
+                             <p style='color:#404237'> ${message.body} </p>
                              
-                             <span class="time_date" style='color:#e3e7f9'> ${padZero(d.getHours())}:${padZero(d.getMinutes())} |  ${padZero(d.getDate())}  ${beamProps.time.months[d.getMonth()].slice(0,3)} </span></div>
+                             <span class="time_date" style='color:#292929'> ${padZero(d.getHours())}:${padZero(d.getMinutes())} |  ${padZero(d.getDate())}  ${beamProps.time.months[d.getMonth()].slice(0,3)} </span></div>
                             </div>
                             </div>
                         </div>
@@ -475,13 +483,9 @@ function loadNewMessages(){
 
              scrollToBottom(100);
             }
-
-
         
        });
 }
-
-
 
 
 function initStoreCache(){

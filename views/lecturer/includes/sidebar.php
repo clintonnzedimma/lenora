@@ -37,8 +37,7 @@
             <span>Assignments</span>
           </a>
           <ul>
-            <li><a href="/">Create Assignments</a></li>
-            <li><a href="/">Submitted Assignments</a></li>
+            <li><a href="/create-assignment">Create Assignments</a></li>
           </ul>
         </li>
 

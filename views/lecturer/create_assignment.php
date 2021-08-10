@@ -8,7 +8,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Create Class - Lecturer Dashboard</title>
+    <title>Create Assignment - Lecturer Dashboard</title>
 
     <!-- <link rel="icon" href="/assets/img/favicon.png" type="image/png"> -->
     <!-- Bootstrap CSS -->
@@ -175,8 +175,7 @@
 
 <script src="/assets/vendors/apex_chart/apexcharts.js"></script>
 
-<!-- custom js -->
-<script src="/assets/js/custom.js"></script>
+
 
 <!-- active_chart js -->
 <script src="/assets/js/active_chart2.js"></script>
@@ -190,13 +189,18 @@
 <!-- summernote -->
 
 <!-- core -->
+
+<!-- custom js -->
 <script src="/assets/vendors/summernote/summernote.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 
 <!-- extension  -->	
-    <script src="/assets/vendorssummernote/ext/addclass.js"></script>
+    <script src="/assets/vendors/summernote/ext/addclass.js"></script>
     <script> 
     window.onload = function() {
+        console.log("Initialize summer note");
     	$('#summernote').summernote({
 		        tabsize: 4,
                 height: 200,

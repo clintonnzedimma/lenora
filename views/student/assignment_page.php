@@ -152,6 +152,7 @@
 <!-- footer  -->
 <!-- jquery slim -->
 <script src="/assets/js/jquery-3.4.1.min.js"></script>
+<script src="/assets/vendors/summernote/summernote.min.js"></script>
 <!-- popper js -->
 <script src="/assets/js/popper.min.js"></script>
 <!-- bootstarp js -->
@@ -165,7 +166,7 @@
 <!-- counterup js -->
 <script src="/assets/vendors/count_up/jquery.counterup.min.js"></script>
 <!-- swiper slider js -->
-<script src="/assets/vendors/swiper_slider//assets/js/swiper.min.js"></script>
+<script src="/assets/vendors/swiper_slider/assets/js/swiper.min.js"></script>
 <!-- nice select -->
 <script src="/assets/vendors/niceselect//assets/js/jquery.nice-select.min.js"></script>
 <!-- owl carousel -->
@@ -173,15 +174,15 @@
 <!-- gijgo css -->
 <script src="/assets/vendors/gijgo/gijgo.min.js"></script>
 <!-- responsive table -->
-<script src="/assets/vendors/datatable//assets/js/jquery.dataTables.min.js"></script>
-<script src="/assets/vendors/datatable//assets/js/dataTables.responsive.min.js"></script>
-<script src="/assets/vendors/datatable//assets/js/dataTables.buttons.min.js"></script>
-<script src="/assets/vendors/datatable//assets/js/buttons.flash.min.js"></script>
-<script src="/assets/vendors/datatable//assets/js/jszip.min.js"></script>
-<script src="/assets/vendors/datatable//assets/js/pdfmake.min.js"></script>
-<script src="/assets/vendors/datatable//assets/js/vfs_fonts.js"></script>
-<script src="/assets/vendors/datatable//assets/js/buttons.html5.min.js"></script>
-<script src="/assets/vendors/datatable//assets/js/buttons.print.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/jquery.dataTables.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/dataTables.responsive.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/dataTables.buttons.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/buttons.flash.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/jszip.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/pdfmake.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/vfs_fonts.js"></script>
+<script src="/assets/vendors/datatable/assets/js/buttons.html5.min.js"></script>
+<script src="/assets/vendors/datatable/assets/js/buttons.print.min.js"></script>
 
 <script src="/assets/js/chart.min.js"></script>
 <!-- progressbar js -->
@@ -193,8 +194,7 @@
 
 <script src="/assets/vendors/apex_chart/apexcharts.js"></script>
 
-<!-- custom js -->
-<script src="/assets/js/custom.js"></script>
+
 
 <!-- active_chart js -->
 <script src="/assets/js/active_chart2.js"></script>
@@ -204,10 +204,15 @@
 <!-- <script src="/assets/vendors/apex_chart/pie.js"></script> -->
 <script src="/assets/vendors/apex_chart/bar_active_2.js"></script>
 <script src="/assets/vendors/chart/assets/js/chartjs_active2.js"></script>
-<script src="/assets/vendors/summernote/summernote.min.js"></script>
+
+
+
 <script src="/assets/vendors/summernote/ext/addclass.js"></script>
+<!-- custom js -->
+<script src="/assets/js/custom.js"></script>
 <script> 
     window.onload = function() {
+        console.log("summernote init");
     	$('#summernote').summernote({
 		        tabsize: 4,
                 height: 400,

@@ -118,12 +118,6 @@ class ChatAPIController extends WoskiController
 				"rKey" => $rKey	
 			]);
 
-			$user_exists_in_chat_room = $this->RoomUser->findAllWhere([
-				"roomKey" => $rKey,
-				"userKey" => $uKey
-			]);
-
-
 		
 			// errors
 			if(!$rKey) {
@@ -138,9 +132,6 @@ class ChatAPIController extends WoskiController
 			if(count($check_rooms) == 0) {
 				$errors[] = "rKey ($rKey) does not exist on your beamtube";
 			}
-			if(count($user_exists_in_chat_room) > 0) {
-				$errors[] = "uKey ($uKey) already exists in rKey ($rKey)";
-			}
 
 
 			$is_created = false;
@@ -149,8 +140,7 @@ class ChatAPIController extends WoskiController
 					"userKey" => $this->Input->sanitize($uKey),
 					"roomKey" => $this->Input->sanitize($rKey),
 					"createdAt" =>  date('Y-m-d H:i:s')
-				]);
-				
+				]);				
 				$is_created = true;
 			}
 
@@ -196,11 +186,7 @@ class ChatAPIController extends WoskiController
 			if(count($check_rooms) == 0) {
 				$errors[] = "rKey ($rKey) does not exist on your beamtube";
 			}
-			if(count($check_users) > 0 
-				&& count($check_rooms) > 0
-				&& count($user_exists_in_chat_room) == 0 ) {
-				$errors[] = "uKey ($uKey) not authorized for rKey ($rKey)";
-			}
+
 			if(strlen($message) == 0) {
 				$errors[] = "Message cant be empty";
 			}
@@ -344,16 +330,10 @@ class ChatAPIController extends WoskiController
 				//throw $th;
 			}
 
-	
-			$user_exists_in_chat_room = $this->RoomUser->findAllWhere([
-				"roomKey" => $rKey,
-				"userKey" => $uKey
-			]);
-
 			$messages = [];
 			$is_auth = false;
 
-			if(count($user_exists_in_chat_room) > 0 || $isMasterUserKey){
+		
 				$is_auth = true;
 				$chat_messages = $this->Message->findAllWhere([
 					"roomKey" => $rKey,
@@ -363,28 +343,28 @@ class ChatAPIController extends WoskiController
 					"ASC" => true					
 				]);
 
-				foreach ($chat_messages as $msg) {
-					if($msg['userKey'] == $uKey) {
-						$msg['isSender'] = true;
-					}else {
-						$msg['isSender'] = false;
-					}
-
-					$userKey = $msg['userKey'];
-
-
-					$msg['monicker'] = null;
-
-					$msg['monicker'] = $this->User->findOneWhere([
-						"chatKey" => $userKey
-					])['username'];
-
-					unset($msg['userKey']);
-					$messages[] = $msg;
+			foreach ($chat_messages as $msg) {
+				if($msg['userKey'] == $uKey) {
+					$msg['isSender'] = true;
+				}else {
+					$msg['isSender'] = false;
 				}
-			}
 
+				$userKey = $msg['userKey'];
+
+
+				$msg['monicker'] = null;
+
+				$msg['monicker'] = $this->User->findOneWhere([
+					"chatKey" => $userKey
+				])['username'];
+
+				unset($msg['userKey']);
+				$messages[] = $msg;
+			}
 			
+
+		
 			$res->json([
 				"status" =>  ($is_auth) ? true : false,
 				"is_auth" => ($is_auth), 
@@ -411,7 +391,7 @@ class ChatAPIController extends WoskiController
 	
 			$is_auth = false;
 
-			if(count($user_exists_in_chat_room) > 0){
+			
 				$is_auth = true;
 				$stmt = $this->DB->prepare("SELECT * FROM chat_messages WHERE  roomKey = :rKey  ORDER BY id DESC");
 				$stmt->execute(array(':rKey' => $rKey));
@@ -433,7 +413,7 @@ class ChatAPIController extends WoskiController
 				 ])['username'];
 
 				 unset($msg['userKey']);
-			}
+			
 
 			
 			$res->json([
