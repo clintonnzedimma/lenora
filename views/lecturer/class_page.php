@@ -78,7 +78,7 @@ span.time_date {
                 <div class="col-lg-12">
                     <div class="single_element">
 
-                    <h3>Class</h3>
+                    <h3>Class : <?php echo $classroom['keyCode'] ?> </h3>
                     <h4><b><?php echo $classroom['name'] ?></b></h4>
                     <div class="row">
                         <!-- vid stream -->
@@ -105,7 +105,7 @@ span.time_date {
                         
                         <div class="text">
                         <!-- <h6>Agent</h6> -->
-                        <p class="text-muted"><b><?php echo $classroom['name'] ?></b></p>
+                        <p class="text-muted"><b><?php echo $classroom['name'] ?></b><br></p>
                         </div>
                         <span class="settings-tray--right">
                         <!-- <i class="material-icons">cached</i>
