@@ -78,7 +78,7 @@ span.time_date {
                 <div class="col-lg-12">
                     <div class="single_element">
 
-                    <h3>Class : <?php echo $classroom['keyCode'] ?> </h3>
+                    <h3>Class : <?php echo $classroom['id'] ?> </h3>
                     <h4><b><?php echo $classroom['name'] ?></b></h4>
                     <div class="row">
                         <!-- vid stream -->
